@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eren — A little corner of the internet</title>
+    <meta
+      name="description"
+      content="Meet Eren. A personal space with a little story, a Hindi song, small moments and new beginnings."
+    />
+    <meta property="og:title" content="Eren — A little corner of the internet" />
+    <meta
+      property="og:description"
+      content="Meet Eren. A personal space with a little story, a Hindi song, small moments and new beginnings."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Page fonts: Manrope (body), Space Grotesk (headings),
+         Tiro Devanagari Hindi (the Hindi story). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ============================================================
+         Icons. Drawn once as a sprite, then reused with <use>.
+         ============================================================ -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol
+        id="i-send"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m22 2-7 20-4-9-9-4Z" />
+        <path d="M22 2 11 13" />
+      </symbol>
+      <symbol
+        id="i-arrow-up-right"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 7h10v10" />
+        <path d="M7 17 17 7" />
+      </symbol>
+      <symbol
+        id="i-arrow-down"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 5v14" />
+        <path d="m19 12-7 7-7-7" />
+      </symbol>
+      <symbol
+        id="i-arrow-up"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m5 12 7-7 7 7" />
+        <path d="M12 19V5" />
+      </symbol>
+      <symbol
+        id="i-music"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol
+        id="i-book"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+      </symbol>
+      <symbol
+        id="i-compass"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+      </symbol>
+      <symbol
+        id="i-headphones"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 0 1 18 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"
+        />
+      </symbol>
+      <symbol
+        id="i-sun"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </symbol>
+      <symbol
+        id="i-download"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" x2="12" y1="15" y2="3" />
+      </symbol>
+      <symbol
+        id="i-link"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="6 3 20 12 6 21 6 3" />
+      </symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor">
+        <rect x="6" y="4" width="4" height="16" rx="1" />
+        <rect x="14" y="4" width="4" height="16" rx="1" />
+      </symbol>
+    </svg>
+
+    <div class="site-shell" id="top">
+      <!-- ===================== HEADER ===================== -->
+      <header class="site-header">
+        <a href="#top" class="wordmark" aria-label="Eren home"
+          >Eren<span class="brand-dot"></span
+        ></a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About me</a>
+          <a href="#song">The song</a>
+          <a href="#story">The story</a>
+          <a href="#contact"
+            >Say hello
+            <svg class="ic ic-nav"><use href="#i-arrow-up-right" /></svg
+          ></a>
+        </nav>
+
+        <a
+          href="https://t.me/Bengali_j"
+          target="_blank"
+          rel="noreferrer"
+          class="header-note eyebrow"
+          ><svg class="ic ic-nav"><use href="#i-send" /></svg> @Bengali_j</a
+        >
+      </header>
+
+      <main>
+        <!-- ===================== COVER ===================== -->
+        <section class="cover" aria-labelledby="name">
+          <img
+            src="assets/coast.jpg"
+            alt="Black-and-white ocean cliffs stretching into the horizon"
+            class="cover-image"
+            width="1600"
+            height="1024"
+          />
+          <div class="cover-content">
+            <span class="eyebrow">A little introduction</span>
+            <h1 id="name">Eren.</h1>
+            <p class="cover-intro">
+              Hey, I’m Eren.<br />Welcome to my little corner<br />of the
+              internet.
+            </p>
+          </div>
+          <span class="cover-stamp" aria-hidden="true">since day one</span>
+          <div class="cover-bottom">
+            <span class="cover-label">My story, in my own way.</span>
+            <a href="#about" class="scroll-link" aria-label="Read about Eren"
+              ><svg class="ic ic-arrow"><use href="#i-arrow-down" /></svg
+            ></a>
+          </div>
+        </section>
+
+        <!-- ===================== MARQUEE ===================== -->
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span
+              >Eren · songs · stories · new beginnings · little moments · Eren ·
+              songs · stories · new beginnings · little moments · Eren · songs ·
+              stories · new beginnings · little moments · Eren · songs · stories
+              · new beginnings · little moments ·</span
+            ><span
+              >Eren · songs · stories · new beginnings · little moments · Eren ·
+              songs · stories · new beginnings · little moments · Eren · songs ·
+              stories · new beginnings · little moments · Eren · songs · stories
+              · new beginnings · little moments ·</span
+            >
+          </div>
+        </div>
+
+        <!-- ===================== 01 ABOUT ===================== -->
+        <section class="about-section" id="about">
+          <div class="section-label">
+            <span class="section-number">01 /</span> About me
+          </div>
+          <div class="about-copy">
+            <h2>
+              Still growing.<br />Still becoming.
+            </h2>
+            <p>
+              I’m Eren — a person, not just a profile. A collection of little
+              moments, big dreams, and everything in between.
+            </p>
+            <p class="mt-4">
+              This is a small space to be myself. No perfect story, just a new
+              chapter.
+            </p>
+            <span class="signature">Eren.</span>
+          </div>
+        </section>
+
+        <!-- ===================== 02 THE SONG ===================== -->
+        <section class="song-section" id="song">
+          <div class="song-head">
+            <div class="section-label">
+              <svg class="ic ic-label"><use href="#i-music" /></svg>
+              <span class="section-number">02 /</span> The song
+            </div>
+            <p>It started the moment you arrived — it stays while you wander.</p>
+          </div>
+
+          <div class="song-layout">
+            <div class="player">
+              <!-- The song plays on its own and loops while the visitor stays. -->
+              <audio
+                id="song-audio"
+                src="assets/eren-song.mp3"
+                preload="metadata"
+                loop
+              ></audio>
+
+              <div class="player-top">
+                <button
+                  id="song-toggle"
+                  class="player-btn"
+                  data-playing="false"
+                  aria-label="Play the song"
+                >
+                  <svg class="ic ic-play"><use href="#i-play" /></svg>
+                  <svg class="ic ic-pause"><use href="#i-pause" /></svg>
+                </button>
+                <div class="player-meta">
+                  <p class="player-title">शुरुआत दोबारा</p>
+                  <p class="player-sub" id="song-status">
+                    Shuruat Dobara · 1:27 · loops as you browse
+                  </p>
+                </div>
+                <span class="sound-waves" id="song-waves" aria-hidden="true"
+                  ><i></i><i></i><i></i><i></i
+                ></span>
+              </div>
+
+              <div class="player-bar">
+                <div class="player-track"></div>
+                <div class="player-fill" id="song-fill"></div>
+                <input
+                  id="song-seek"
+                  type="range"
+                  min="0"
+                  max="87"
+                  step="0.1"
+                  value="0"
+                  aria-label="Seek through the song"
+                />
+              </div>
+
+              <div class="player-time">
+                <span id="song-current">0:00</span><span id="song-total">1:27</span>
+              </div>
+
+              <div class="player-actions">
+                <a
+                  class="btn btn-outline btn-sm"
+                  href="assets/eren-song.mp3"
+                  download="eren-shuruat-dobara.mp3"
+                  ><svg class="ic"><use href="#i-download" /></svg>Download the
+                  song</a
+                >
+                <span class="player-note" id="song-note" hidden
+                  >Tap anywhere to unmute</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== 03 THE STORY ===================== -->
+        <section class="story-section" id="story">
+          <div class="section-label">
+            <svg class="ic ic-label"><use href="#i-book" /></svg>
+            <span class="section-number">03 /</span> A little story
+          </div>
+
+          <div class="story-copy">
+            <div class="story-head">
+              <h2 class="story-title" id="story-title">“लगभग” वाली ट्रेन</h2>
+              <div class="story-toggle" role="group" aria-label="Choose story language">
+                <button type="button" data-lang="hindi" aria-pressed="true">
+                  हिन्दी
+                </button>
+                <button type="button" data-lang="english" aria-pressed="false">
+                  English
+                </button>
+              </div>
+            </div>
+
+            <div class="story-body hindi" id="story-hindi">
+              <p>एरेन को “लगभग” शब्द जमा करना पसंद था।</p>
+              <p>लगभग चित्रकार। लगभग क़वि। लगभग समय पर निकल जाने वाला इंसान।</p>
+              <p>एक सुबह उसे छत पर एक डब्बा मिला — न ढक्कन, न कोई नाम, और उसके अंदर बस एक टिकट था। दस साल पहले चल चुकी ट्रेन का।</p>
+              <p>उसने उसे बहुत देर तक हाथ में रखा। फ़िर उसके पीछे लिखा: “फ़िर से चढ़ रहा हूँ।”</p>
+              <p>उसे कभी पता नहीं चला कि वह ट्रेन कहाँ जाती थी। बस उसने उस दिशा में चलना शुरू कर दिया — और यहीं से, लगभग हर सफ़र शुरू होता है।</p>
+            </div>
+            <div class="story-body" id="story-english" hidden>
+              <p>Eren liked collecting the word “almost”.</p>
+              <p>Almost a painter. Almost a poet. Almost someone who leaves on time.</p>
+              <p>One morning he found a box on his roof — no lid, no label, and inside it a single ticket. For a train that had left ten years ago.</p>
+              <p>He held it for a long time. Then he wrote on the back: “boarding again.”</p>
+              <p>He never did find out where that train went. He just started walking that way — and that, it turns out, is how almost every journey begins.</p>
+            </div>
+
+            <span class="story-note" id="story-note">Written for this page · Eren</span>
+          </div>
+        </section>
+
+        <!-- ===================== 04 LITTLE THINGS ===================== -->
+        <section class="little-section" id="little-things">
+          <div class="little-heading">
+            <div class="section-label">
+              <span class="section-number">04 /</span> The little things
+            </div>
+            <p>Life beyond the bio.</p>
+          </div>
+          <div class="little-grid">
+            <article class="little-item">
+              <svg class="ic ic-card"><use href="#i-compass" /></svg>
+              <h3>New perspectives</h3>
+              <p>There’s always more to discover.</p>
+            </article>
+            <article class="little-item">
+              <svg class="ic ic-card"><use href="#i-headphones" /></svg>
+              <h3>A good soundtrack</h3>
+              <p>Some moments deserve a song.</p>
+            </article>
+            <article class="little-item">
+              <svg class="ic ic-card"><use href="#i-sun" /></svg>
+              <h3>Simple moments</h3>
+              <p>The small things that stay with us.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===================== 05 SAY HELLO ===================== -->
+        <section class="contact-section" id="contact">
+          <div class="section-label">
+            <svg class="ic ic-label"><use href="#i-send" /></svg>
+            <span class="section-number">05 /</span> Say hello
+          </div>
+          <div class="contact-card">
+            <div class="contact-copy">
+              <h2>Find me on Telegram.</h2>
+              <p>
+                The fastest way to reach me. Ping me anytime — I read everything.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary btn-lg"
+              href="https://t.me/Bengali_j"
+              target="_blank"
+              rel="noreferrer"
+              ><svg class="ic"><use href="#i-send" /></svg>@Bengali_j</a
+            >
+          </div>
+        </section>
+
+        <!-- ===================== CLOSING ===================== -->
+        <section class="closing">
+          <div>
+            <span class="eyebrow">Until next time</span>
+            <h2>Thanks for stopping by.</h2>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline btn-lg" id="share-btn">
+              <svg class="ic"><use href="#i-link" /></svg
+              ><span id="share-label">Share my page</span>
+            </button>
+            <p class="share-hint" id="share-hint" hidden>
+              Copy the page address to share it.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ===================== FOOTER ===================== -->
+      <footer class="site-footer">
+        <span>© 2026 Eren. A little space of my own.</span>
+        <a href="https://t.me/Bengali_j" target="_blank" rel="noreferrer"
+          ><svg class="ic ic-foot"><use href="#i-send" /></svg> @Bengali_j</a
+        >
+        <a href="#top"
+          >Back to top <svg class="ic ic-foot"><use href="#i-arrow-up" /></svg
+        ></a>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
