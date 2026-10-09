@@ -1,2 +1,0 @@
-# Eren.bio
-My bio
